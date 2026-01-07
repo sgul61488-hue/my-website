@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahzad Gul | UET ATD - SE Batch 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Shahzad<span>Gul.</span></a>
+                
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#academic">Academic</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    
+                    <li class="theme-switcher">
+                        <i class="fas fa-moon"></i>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle">
+                            <span class="slider"></span>
+                        </label>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section / Personal Profile -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="profile-container">
+                <img src="myphoto.jpg" alt="Shahzad Gul" class="profile-pic">
+                <div class="profile-info">
+                    <h1>Shahzad Gul</h1>
+                    <div class="registration">Registration: 2025-SE-5121593 | UET Abbottabad Campus</div>
+                    <h2>Software Engineering Student</h2>
+                    <div class="bio">
+                        <p>A dedicated Software Engineering student at the University of Engineering and Technology, Abbottabad Campus, passionate about leveraging technology to solve real-world problems. With a strong foundation in programming and web development, I'm committed to continuous learning and professional growth in the tech industry.</p>
+                        <p>My technical interests include full-stack web development, artificial intelligence, and cloud computing. I enjoy transforming complex challenges into elegant, user-friendly solutions that create meaningful impact.</p>
+                        <div class="skills">
+                            <span class="skill-tag">Web Development</span>
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Team Collaboration</span>
+                            <span class="skill-tag">Continuous Learning</span>
+                        </div>
+                    </div>
+                    <div class="social-hero">
+                        <a href="https://www.linkedin.com/in/shahzad-gul-b45575348?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1Fnmh6t4M8/" target="_blank" class="social-link" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Background -->
+    <section id="academic">
+        <div class="container">
+            <div class="section-title">
+                <h2>Academic Background</h2>
+                <p>My educational journey from matriculation to university</p>
+            </div>
+            
+            <div class="academic-controls">
+                <h3>Education History</h3>
+                <div class="filter-sort">
+                    <div class="filter-group">
+                        <label for="level-filter">Filter by Level:</label>
+                        <select id="level-filter">
+                            <option value="all">All Education Levels</option>
+                            <option value="Matric">Matriculation</option>
+                            <option value="Intermediate">Intermediate</option>
+                            <option value="University">University</option>
+                        </select>
+                    </div>
+                    
+                    <div class="search-group">
+                        <label for="search-box">Search:</label>
+                        <input type="text" id="search-box" placeholder="Institution, year, or board...">
+                    </div>
+                    
+                    <button id="sort-year" class="sort-btn">
+                        <i class="fas fa-sort-amount-down"></i> Sort by Year
+                    </button>
+                    <button id="reset-filters" class="sort-btn secondary">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <table id="academic-table">
+                    <thead>
+                        <tr>
+                            <th data-sort="level">Education Level <i class="fas fa-sort"></i></th>
+                            <th data-sort="institution">Institution <i class="fas fa-sort"></i></th>
+                            <th data-sort="year">Year <i class="fas fa-sort"></i></th>
+                            <th data-sort="board">Board/University <i class="fas fa-sort"></i></th>
+                            <th data-sort="status">Status <i class="fas fa-sort"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody id="academic-table-body">
+                        <!-- Table rows will be populated by JavaScript -->
+                    </tbody>
+                </table>
+                <div class="table-info">
+                    Showing <span id="row-count">3</span> of 3 records
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV Viewer -->
+    <section id="cv">
+        <div class="container">
+            <div class="section-title">
+                <h2>Curriculum Vitae</h2>
+                <p>View or download my complete CV</p>
+            </div>
+            
+            <div class="cv-viewer">
+                <div class="cv-actions">
+                    <a href="cv.pdf" class="cv-link" id="cv-download" target="_blank">
+                        <i class="fas fa-download"></i> Download CV (PDF)
+                    </a>
+                    <a href="cv.pdf" class="cv-link secondary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Open in New Tab
+                    </a>
+                </div>
+                
+                <div class="cv-container">
+                    <div class="cv-placeholder" id="cv-placeholder">
+                        <div class="placeholder-content">
+                            <i class="fas fa-file-pdf"></i>
+                            <h3>CV Preview</h3>
+                            <p>In a real implementation, a PDF viewer would be embedded here.</p>
+                            <p>For demonstration purposes, the PDF can be downloaded using the button above.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+                <p>Get in touch for collaborations or inquiries</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>Department of Software Engineering<br>UET Abbottabad Campus</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>sgul61488@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+923709717108</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h4>Connect with me</h4>
+                            <div class="social-contact">
+                                <a href="https://www.linkedin.com/in/shahzad-gul-b45575348?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" title="LinkedIn">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://www.facebook.com/share/1Fnmh6t4M8/" target="_blank" title="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="#" title="GitHub">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" class="form-control" placeholder="Enter your full name">
+                            <div class="error-message" id="name-error">Please enter your name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" class="form-control" placeholder="Enter your email address">
+                            <div class="error-message" id="email-error">Please enter a valid email address</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Enter subject">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" class="form-control" placeholder="Enter your message here..." rows="5"></textarea>
+                            <div class="error-message" id="message-error">Please enter your message</div>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        
+                        <div class="success-message" id="success-message">
+                            <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects & Gallery</h2>
+                <p>Explore my work and project portfolio</p>
+            </div>
+            
+            <!-- Progress Tracker -->
+            <div class="progress-tracker">
+                <h3>Project Progress Tracker</h3>
+                <p class="section-subtitle">Current status of my ongoing projects</p>
+                
+                <div class="task">
+                    <div class="task-info">
+                        <div>
+                            <h4>Portfolio Website Development</h4>
+                            <p>HTML, CSS, JavaScript</p>
+                        </div>
+                        <span class="percentage">95%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="95"></div>
+                    </div>
+                </div>
+                
+                <div class="task">
+                    <div class="task-info">
+                        <div>
+                            <h4>Student Management System</h4>
+                            <p>Python, MySQL, Tkinter</p>
+                        </div>
+                        <span class="percentage">75%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="75"></div>
+                    </div>
+                </div>
+                
+                <div class="task">
+                    <div class="task-info">
+                        <div>
+                            <h4>E-commerce Web Application</h4>
+                            <p>React, Node.js, MongoDB</p>
+                        </div>
+                        <span class="percentage">60%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="60"></div>
+                    </div>
+                </div>
+                
+                <div class="task">
+                    <div class="task-info">
+                        <div>
+                            <h4>Mobile App Development</h4>
+                            <p>React Native, Firebase</p>
+                        </div>
+                        <span class="percentage">40%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" data-width="40"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Image Carousel -->
+            <div class="gallery">
+                <h3>Project Gallery</h3>
+                <p class="section-subtitle">Visual showcase of my completed projects</p>
+                
+                <div class="carousel">
+                    <div class="carousel-inner" id="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Web Development Project">
+                            <div class="carousel-caption">
+                                <h4>Portfolio Website</h4>
+                                <p>A fully responsive portfolio website with dynamic features</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="E-commerce Project">
+                            <div class="carousel-caption">
+                                <h4>E-commerce Platform</h4>
+                                <p>Online shopping website with payment integration</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Mobile App Project">
+                            <div class="carousel-caption">
+                                <h4>Fitness Tracking App</h4>
+                                <p>Mobile application for workout tracking and nutrition planning</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="AI Project">
+                            <div class="carousel-caption">
+                                <h4>AI Image Recognition</h4>
+                                <p>Machine learning model for image classification</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" id="prev-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="carousel-indicators" id="carousel-indicators">
+                            <!-- Indicators will be added by JavaScript -->
+                        </div>
+                        <button class="carousel-btn" id="next-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shahzad Gul</h3>
+                    <p>Software Engineering student at UET Abbottabad Campus, passionate about creating innovative web solutions and applications.</p>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/shahzad-gul-b45575348?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/share/1Fnmh6t4M8/" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#academic">Academic Background</a></li>
+                        <li><a href="#cv">CV</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> Department of Software Engineering, UET Abbottabad Campus</p>
+                        <p><i class="fas fa-envelope"></i> sgul61488@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +92 370 9717108</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Shahzad Gul | Department of Software Engineering, UET Abbottabad Campus</p>
+                <p>Registration: 2025-SE-001</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="script.js"></script>
+</body>
+</html>
